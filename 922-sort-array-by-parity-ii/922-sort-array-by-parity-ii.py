@@ -1,15 +1,16 @@
 class Solution:
     def sortArrayByParityII(self, nums: List[int]) -> List[int]:
-        if len(nums)>1 : 
-            even = [i for i in nums if (i%2==0)]
-            odds = [i for i in nums if (i%2==1)]
+        if len(nums)>1:
+            aux_list = [0]*len(nums)
+            anc_even, anc_odd = 0, 1
             
-            #even = sorted(even)
-            #odds = sorted(odds)
-            
-            for i in range(len(nums)//2):
-                nums[i*2] = even[i]
-                nums[i*2+1] = odds[i]
-            return nums
-
-        else: return nums
+            for elem in nums:
+                if elem%2 == 0:
+                    aux_list[anc_even] = elem
+                    anc_even+=2
+                else:
+                    aux_list[anc_odd] = elem
+                    anc_odd+=2
+            return aux_list
+        
+        else: return aux_list
