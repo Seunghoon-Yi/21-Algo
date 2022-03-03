@@ -1,9 +1,7 @@
 class Solution:
     def sortEvenOdd(self, nums: List[int]) -> List[int]:
         if len(nums)>1:
-            even, odd = nums[0::2], nums[1::2]
-            even = sorted(even)
-            odd = sorted(odd)[::-1]
+            even, odd = sorted(nums[0::2]), sorted(nums[1::2])[::-1]
             
             for (i, elem) in enumerate(even):
                 nums[i*2] = even[i]
