@@ -18,6 +18,8 @@ typedef struct{
     int age;
 } Person;
 
+// ex : typedef int intNum 등으로 int type의 이름을 바꿀수도 있음
+
 int main(void){
     struct book book1 = {
         "HTML & CSS", "george", 20
