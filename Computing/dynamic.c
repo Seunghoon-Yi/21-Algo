@@ -20,6 +20,7 @@ typedef struct{
 } Student;
 
 int main(void){
+    //int asdf = malloc(sizeof(int));
     int *intPtr = malloc(sizeof(int));
     intPtr2 = (int*)malloc(sizeof(int)); // 이렇게도 할당 가능
     char *cPtr = malloc(sizeof(char));
